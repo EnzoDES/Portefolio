@@ -2,32 +2,198 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mes Projets</title>
+<title>Projet BTS SIO - Réseau & OCS</title>
 
 <style>
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    padding: 40px;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #333;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1e3c72;
 }
 
-h1 {
-    text-align: center;
+/* HEADER */
+header {
+    background: #1e3c72;
     color: white;
-    margin-bottom: 25px;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
+/* BADGE PROJET */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    color: #1e3c72;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    border-left: 6px solid #1e3c72;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1e3c72;
+}
+
+/* NETWORK */
+.network {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.box {
+    background: #1e3c72;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.vlan {
+    background: white;
+    border: 2px solid #1e3c72;
+    color: #1e3c72;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    color: #777;
+}
+
+/* PROJECT INFO */
+.project-info {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #1e3c72;
+    font-weight: bold;
 }
 </style>
-<head>
+
+</head>
+
 <body>
+
+<header>
+    <div class="badge">PROJET 1 / 2</div>
+    <h1>Projet BTS SIO SISR</h1>
+    <p>Gestion de parc informatique & Sécurisation réseau</p>
+</header>
+
+<div class="project-info">
+    ⚠️ Premier projet sur deux présentés à l’oral du BTS
+</div>
 
 <div class="container">
 
-<h1>Mes Projets</h1>
+    <div class="card">
+        <h2>📌 Contexte</h2>
+        <p>Mise en place d’une solution de gestion de parc informatique et de segmentation réseau pour une entreprise fictive.</p>
+    </div>
+
+    <div class="card">
+        <h2>❓ Problématique</h2>
+        <p>Comment gérer efficacement un parc informatique tout en sécurisant le réseau de l’entreprise ?</p>
+    </div>
+
+    <div class="card">
+        <h2>💡 Solution</h2>
+        <p>Utilisation de OCS Inventory NG et mise en place de VLANs pour la segmentation réseau.</p>
+    </div>
+
+    <div class="card">
+        <h2>🌐 Schéma réseau</h2>
+
+        <div class="network">
+
+            <div class="box">🌐 Internet</div>
+
+            <div class="box">Routeur / Firewall</div>
+
+            <div class="row">
+
+                <div class="box vlan">
+                    VLAN 10<br>
+                    ADMIN
+                </div>
+
+                <div class="box vlan">
+                    VLAN 20<br>
+                    USERS
+                </div>
+
+            </div>
+
+            <div class="box">
+                VLAN 30 - SERVEUR<br>
+                🖥️ OCS Inventory NG
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🖥️ OCS Inventory</h2>
+        <p>Installation d’un serveur OCS Inventory permettant l’inventaire automatique des machines.</p>
+    </div>
+
+    <div class="card">
+        <h2>🔐 Sécurité</h2>
+        <p>Segmentation via VLANs pour isoler les flux et limiter les accès entre services.</p>
+    </div>
+
+    <div class="card">
+        <h2>🏁 Conclusion</h2>
+        <p>Ce projet améliore la gestion du parc informatique et renforce la sécurité du réseau.</p>
+    </div>
 
 </div>
-</head>
+
+<footer>
+    BTS SIO - Projet 1 sur 2
+</footer>
+
 </body>
+</html>
