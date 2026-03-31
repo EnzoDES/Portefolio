@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Veille technologique - Réalité virtuelle</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-      body {
+<title>Veille technologique - Réalité Virtuelle</title>
+
+<style>
+body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 40px;
@@ -13,184 +15,207 @@
     color: #333;
 }
 
-/* Conteneur général */
-body > * {
-    max-width: 900px;
+/* Conteneur */
+.container {
+    max-width: 950px;
     margin: auto;
 }
 
-/* ===== Titre principal ===== */
+/* Titre principal */
 h1 {
     text-align: center;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-/* ===== Sections veille techno ===== */
+/* Sections */
 section {
     background: white;
     padding: 25px;
     margin-top: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    line-height: 1.6;
+    line-height: 1.7;
     transition: 0.3s;
 }
 
-/* Effet hover identique CV */
 section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
-/* ===== Titres des sections ===== */
+/* Titres */
 h2 {
     color: #1e3c72;
     border-left: 5px solid #2a5298;
     padding-left: 10px;
 }
 
-/* ===== Problématique ===== */
+/* Problématique */
 .problematique {
     font-weight: bold;
     color: #2a5298;
+    background: #f0f6ff;
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #1e3c72;
 }
 
-/* ===== Listes ===== */
+/* Images */
+.image-box {
+    width: 100%;
+    height: 220px;
+    border: 2px dashed #2a5298;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2a5298;
+    font-weight: bold;
+    background: #f8fafc;
+}
+
+/* Listes */
 ul {
     margin-left: 20px;
 }
 
-/* ===== Responsive ===== */
+/* Responsive */
 @media (max-width: 700px) {
     body {
         padding: 15px;
     }
 
     section {
-        padding: 20px;
+        padding: 18px;
     }
 
     h1 {
-        font-size: 22px;
+        font-size: 24px;
     }
 }
-    </style>
+</style>
+
 </head>
+
 <body>
 
-<div class="box">
+<div class="container">
 
-<h1>Veille technologique : La réalité virtuelle</h1>
+<h1>Veille technologique : Réalité Virtuelle</h1>
 
-<div class="box">
+<!-- PROBLEMATIQUE -->
+<section>
 <h2>Problématique</h2>
 <p class="problematique">
-Comment la réalité virtuelle transforme-t-elle les usages dans différents domaines, et quelles sont ses limites et ses impacts sur les utilisateurs ?
+Comment la réalité virtuelle transforme-t-elle les usages dans différents domaines et quels sont ses enjeux, ses limites et son impact ?
 </p>
-</div>
+</section>
 
-<div class="box">
+<!-- INTRO -->
+<section>
 <h2>Introduction</h2>
 <p>
-Dans le cadre de mon BTS SIO, j’ai réalisé une veille technologique sur la réalité virtuelle. 
-Cette technologie immersive connaît une forte croissance et attire de nombreux acteurs comme les entreprises du numérique, de la santé ou de l’industrie.
-Elle permet de créer des environnements virtuels interactifs dans lesquels l’utilisateur peut évoluer.
+La réalité virtuelle est une technologie immersive permettant de plonger un utilisateur dans un environnement numérique interactif.
+Elle est aujourd’hui utilisée dans de nombreux secteurs comme le jeu vidéo, la médecine, l’éducation ou encore l’industrie.
 </p>
-</div>
 
-<div class="box">
-<h2>Définition de la réalité virtuelle</h2>
+<div class="image-box">
+IMAGE INTRO / CASQUE VR (à ajouter)
+</div>
+</section>
+
+<!-- DEFINITION -->
+<section>
+<h2>Définition</h2>
 <p>
-La réalité virtuelle est une technologie informatique qui permet de simuler un environnement en 3D dans lequel un utilisateur peut interagir. 
-Elle repose sur l’utilisation de casques VR, de capteurs de mouvement et parfois de contrôleurs.
-L’objectif est de créer une immersion totale en stimulant les sens (vue, son, parfois toucher).
+La réalité virtuelle consiste à simuler un environnement en 3D grâce à des casques VR et des capteurs de mouvement.
+Elle permet une immersion visuelle et sonore complète.
 </p>
-</div>
 
-<div class="box">
+<div class="image-box">
+SCHEMA OU CASQUE VR (à ajouter)
+</div>
+</section>
+
+<!-- FONCTIONNEMENT -->
+<section>
 <h2>Fonctionnement</h2>
-<p>
-Le fonctionnement de la réalité virtuelle repose sur plusieurs éléments :
-</p>
 <ul>
-<li>Un casque VR affichant un environnement en 3D</li>
-<li>Des capteurs pour suivre les mouvements de la tête</li>
-<li>Des manettes pour interagir avec le monde virtuel</li>
-<li>Un ordinateur ou une console pour traiter les données</li>
+<li>Casque de réalité virtuelle</li>
+<li>Capteurs de mouvement</li>
+<li>Manettes interactives</li>
+<li>Ordinateur ou console puissante</li>
 </ul>
-</div>
 
-<div class="box">
-<h2>Domaines d’application</h2>
-<p>
-La réalité virtuelle est utilisée dans de nombreux secteurs :
-</p>
+<div class="image-box">
+FONCTIONNEMENT VR (schéma à ajouter)
+</div>
+</section>
+
+<!-- APPLICATIONS -->
+<section>
+<h2>Applications</h2>
 <ul>
-<li><strong>Jeux vidéo :</strong> immersion totale dans des univers virtuels</li>
-<li><strong>Médecine :</strong> simulation d’opérations et formation</li>
-<li><strong>Éducation :</strong> apprentissage interactif</li>
-<li><strong>Industrie :</strong> conception et simulation de produits</li>
-<li><strong>Armée et sécurité :</strong> entraînements en conditions réalistes</li>
+<li>Jeux vidéo (immersion totale)</li>
+<li>Médecine (simulation d’opérations)</li>
+<li>Industrie (conception 3D)</li>
+<li>Éducation (apprentissage interactif)</li>
+<li>Sécurité (entraînement réaliste)</li>
 </ul>
-</div>
 
-<div class="box">
+<div class="image-box">
+EXEMPLES D’UTILISATION VR (à ajouter)
+</div>
+</section>
+
+<!-- AVANTAGES -->
+<section>
 <h2>Avantages</h2>
 <ul>
-<li>Immersion complète</li>
-<li>Apprentissage plus efficace</li>
-<li>Réduction des risques (simulation)</li>
+<li>Immersion totale</li>
+<li>Apprentissage efficace</li>
+<li>Simulation sans danger</li>
 <li>Innovation technologique</li>
 </ul>
-</div>
+</section>
 
-<div class="box">
+<!-- LIMITES -->
+<section>
 <h2>Limites et risques</h2>
 <ul>
-<li>Coût élevé du matériel</li>
-<li>Fatigue visuelle et nausées</li>
-<li>Risque d’isolement social</li>
+<li>Coût élevé</li>
+<li>Fatigue visuelle</li>
+<li>Nausées possibles</li>
+<li>Risque d’isolement</li>
 <li>Collecte de données personnelles</li>
 </ul>
-</div>
+</section>
 
-<div class="box">
+<!-- EVOLUTION -->
+<section>
 <h2>Évolution et avenir</h2>
 <p>
-La réalité virtuelle est en constante évolution. De grandes entreprises investissent massivement dans ce domaine.
-On observe des améliorations au niveau des casques, de la qualité graphique et de l’interaction.
-À l’avenir, la VR pourrait devenir plus accessible et être utilisée dans encore plus de domaines comme le télétravail ou les réseaux sociaux immersifs.
+La réalité virtuelle est en forte croissance grâce aux investissements des grandes entreprises.
+Elle pourrait devenir une technologie essentielle dans le travail, les loisirs et la communication.
 </p>
-</div>
 
-<div class="box">
+<div class="image-box">
+AVENIR / TECHNOLOGIE FUTURE (à ajouter)
+</div>
+</section>
+
+<!-- CONCLUSION -->
+<section>
 <h2>Conclusion</h2>
 <p>
-La réalité virtuelle représente une avancée majeure dans le domaine des technologies numériques.
-Elle transforme déjà de nombreux secteurs mais présente encore des limites.
-Son développement futur dépendra de sa capacité à devenir plus accessible, plus confortable et plus sécurisée.
+La réalité virtuelle est une technologie innovante qui transforme de nombreux domaines.
+Cependant, elle doit encore évoluer pour devenir plus accessible et limiter ses contraintes techniques et sociales.
 </p>
+</section>
+
 </div>
 
-	<div class="box"> 
- <a href="https://enzodes.github.io/Portefolio/">
- <button style="
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-     background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-	  margin-top:10px
-    ">
-   Retour au portfolio
-    </button>
-  
-</section>
-</div>
 </body>
 </html>
