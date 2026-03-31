@@ -5,41 +5,71 @@
     <title>Veille technologique - Réalité virtuelle</title>
 
     <style>
-        body {
-            font-family: Arial;
-            background-color: #0f172a;
-            color: white;
-            padding: 20px;
-			background: linear-gradient(135deg, #1e3c72, #2a5298); color: #333;
-        }
+       body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #333;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-        }
+/* Conteneur général */
+body > * {
+    max-width: 900px;
+    margin: auto;
+}
 
-        h1 {
-            text-align: center;
-            color: #1e3c72;
-        }
+/* ===== Titre principal ===== */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
 
-        h2 {
-            color: #1e3c72;
-            margin-top: 30px;
-        }
+/* ===== Sections veille techno ===== */
+section {
+    background: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    line-height: 1.6;
+    transition: 0.3s;
+}
 
-        .box {
-            background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
+/* Effet hover identique CV */
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
 
-        .problematique {
-            font-weight: bold;
-            border-left: 5px solid white;
-            padding-left: 10px;
-        }
+/* ===== Titres des sections ===== */
+h2 {
+    color: #1e3c72;
+    border-left: 5px solid #2a5298;
+    padding-left: 10px;
+}
+
+/* ===== Problématique ===== */
+.problematique {
+    font-weight: bold;
+    color: #2a5298;
+}
+
+/* ===== Listes ===== */
+ul {
+    margin-left: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
     </style>
 </head>
 <body>
