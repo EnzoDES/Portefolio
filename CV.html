@@ -6,150 +6,238 @@
 
 		<title>CV - Enzo DESMARETS</title>	
 		<style>  
+/* =========================
+RESET / BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Arial, sans-serif;
+}
 
-			/* ===== Body & Général ===== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 40px;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #333;
+  background: #0a0c12;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 40px;
 }
 
-/* Conteneur général */
+/* =========================
+BACKGROUND ANIMÉ PREMIUM
+========================= */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(124,58,237,0.25), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(34,211,238,0.18), transparent 40%);
+  animation: bgMove 12s infinite alternate ease-in-out;
+  z-index: -2;
+}
+
+@keyframes bgMove {
+  0% { transform: scale(1) translate(0,0); }
+  100% { transform: scale(1.15) translate(30px,-20px); }
+}
+
+/* =========================
+CONTENEUR GLOBAL
+========================= */
 body > * {
-    max-width: 900px;
-    margin: auto;
+  max-width: 900px;
+  margin: auto;
 }
 
-/* ===== Image profil ===== */
-img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 20px auto;
-    border: 4px solid white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+/* =========================
+NAV BAR
+========================= */
+nav {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px;
+  text-align: center;
+  border-radius: 12px;
 }
 
-/* ===== Header ===== */
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: 0.3s;
+  position: relative;
+}
+
+nav a:hover {
+  opacity: 1;
+  color: #7c3aed;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #7c3aed;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+HEADER CV
+========================= */
 header {
-    background: white;
-    padding: 25px;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(124,58,237,0.4);
+  margin-bottom: 10px;
+  border: 3px solid rgba(255,255,255,0.2);
 }
 
 header h1 {
-    margin: 10px 0;
-    font-size: 32px;
-    letter-spacing: 2px;
-    color: #1e3c72;
+  font-size: 32px;
+  background: linear-gradient(90deg,#7c3aed,#22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header p {
-    margin: 4px 0;
-    color: #555;
-    font-size: 15px;
+  opacity: 0.8;
+  font-size: 15px;
 }
 
-/* ===== Sections ===== */
+/* =========================
+SECTIONS / CARDS CV
+========================= */
 section {
-    background: white;
-    padding: 25px;
-    margin-top: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    line-height: 1.6;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  padding: 25px;
+  margin: 25px auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  line-height: 1.6;
+  transition: 0.5s;
 }
 
-/* Titres sections */
-.section-title {
-    background: linear-gradient(90deg, #1e3c72, #2a5298);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.section-title h3 {
-    margin: 0;
-}
-
-/* Dates */
-.date {
-    font-weight: bold;
-    color: #2a5298;
-    font-size: 16px;
-}
-
-/* Hover moderne sur sections */
+/* hover cards */
 section:hover {
-    transform: translateY(-3px);
-    transition: 0.3s;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transform: translateY(-10px) scale(1.01);
+  background: rgba(124,58,237,0.12);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
 }
 
-/* ===== Centre d'intérêt ===== */
-/* Titre */
-body > .section-title:last-of-type {
-    max-width: 900px;
-    margin: 20px auto 0 auto;
-    background: linear-gradient(90deg, #1e3c72, #2a5298);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px 8px 0 0;
-    font-size: 18px;
+/* titres sections */
+.section-title {
+  background: linear-gradient(90deg,#7c3aed,#22d3ee);
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: white;
 }
 
-/* Texte sous le titre */
-body > .section-title:last-of-type + * {
-    display: block;
-    background: white;
-    padding: 25px;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    line-height: 1.6;
-    font-size: 15px;
+/* dates */
+.date {
+  font-weight: bold;
+  color: #22d3ee;
 }
 
-/* Hover identique aux autres sections */
-body > .section-title:last-of-type + *:hover {
-    transform: translateY(-3px);
-    transition: 0.3s;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+/* =========================
+BOUTON UNIQUE
+========================= */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #7c3aed;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 
-/* ===== Responsive ===== */
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(124,58,237,0.3);
+}
+
+/* glow bouton */
+button::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(90deg,#7c3aed,#22d3ee,#7c3aed);
+  opacity: 0;
+  filter: blur(12px);
+  transition: 0.3s;
+  z-index: -1;
+}
+
+button:hover::before {
+  opacity: 1;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+REVEAL ANIMATION
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
 @media (max-width: 700px) {
-    body {
-        padding: 15px;
-    }
-    
-    header h1 {
-        font-size: 24px;
-    }
-    
-    section, body > .section-title:last-of-type + * {
-        padding: 20px;
-    }
-    
-    img {
-        width: 100px;
-        height: 100px;
-    }
+  body {
+    padding: 15px;
+  }
 
-    @keyframes auraPulse{
-  0%{opacity:0.4; transform:scale(1);}
-  50%{opacity:0.7; transform:scale(1.02);}
-  100%{opacity:0.4; transform:scale(1);}
-}
+  header h1 {
+    font-size: 24px;
+  }
 
-.card:hover::before{
-  animation:auraPulse 3s infinite ease-in-out;
+  section {
+    padding: 20px;
+  }
+
+  header img {
+    width: 100px;
+    height: 100px;
+  }
 }
 </style>
 
