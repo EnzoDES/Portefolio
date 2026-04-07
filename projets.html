@@ -5,139 +5,249 @@
 <title>Projet BTS SIO - Réseau & OCS</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f6f9;
-    color: #1e3c72;
+/* =========================
+RESET / BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Arial, sans-serif;
 }
 
-/* HEADER */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0c12;
+  color: white;
+  overflow-x: hidden;
+  padding: 40px;
+}
+
+/* =========================
+BACKGROUND PREMIUM
+========================= */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(124,58,237,0.25), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(34,211,238,0.18), transparent 40%);
+  animation: bgMove 12s infinite alternate ease-in-out;
+  z-index: -2;
+}
+
+@keyframes bgMove {
+  0% { transform: scale(1) translate(0,0); }
+  100% { transform: scale(1.15) translate(30px,-20px); }
+}
+
+/* =========================
+HEADER PREMIUM
+========================= */
 header {
-    background: #1e3c72;
-    color: white;
-    padding: 25px;
-    text-align: center;
-    position: relative;
+  text-align: center;
+  padding: 50px 20px;
+  margin-bottom: 30px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 28px;
+  font-size: 30px;
+  background: linear-gradient(90deg,#7c3aed,#22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header p {
-    margin: 5px 0 0 0;
-    font-size: 14px;
+  opacity: 0.8;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
-/* BADGE PROJET */
+/* =========================
+BADGE PROJET (premium)
+========================= */
 .badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: white;
-    color: #1e3c72;
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 12px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  background: rgba(124,58,237,0.15);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(124,58,237,0.4);
+  color: white;
+
+  font-weight: bold;
+  font-size: 12px;
 }
 
-/* CONTAINER */
+/* =========================
+CONTAINER
+========================= */
 .container {
-    width: 90%;
-    margin: auto;
-    padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* CARDS */
+/* =========================
+CARDS PREMIUM
+========================= */
 .card {
-    background: white;
-    border-left: 6px solid #1e3c72;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
 
-    transition: all 0.25s ease;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
+
+  border-left: 4px solid #7c3aed;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
 }
 
-/* 🌟 FLOAT CARD -3PX */
+/* hover */
 .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 12px 25px rgba(30,60,114,0.25);
+  transform: translateY(-10px) scale(1.01);
+  background: rgba(124,58,237,0.12);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
 }
 
-/* TITRES */
+/* glow */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(124,58,237,0.15), transparent 60%);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+TITRES
+========================= */
 h2 {
-    color: #1e3c72;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+  position: relative;
 }
 
-/* NETWORK */
+h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 5px;
+
+  background: linear-gradient(90deg,#7c3aed,#22d3ee);
+}
+
+/* =========================
+NETWORK BOX
+========================= */
 .network {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
+/* BOXES */
 .box {
-    background: #1e3c72;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 10px;
-    min-width: 200px;
-    text-align: center;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
 
-    transition: all 0.25s ease;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  min-width: 200px;
+  text-align: center;
+
+  border: 1px solid rgba(124,58,237,0.3);
+
+  transition: 0.3s;
 }
 
-/* 🌟 FLOAT BOX -3PX */
 .box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 10px 20px rgba(30,60,114,0.25);
-    cursor: pointer;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(124,58,237,0.25);
+  border-color: #22d3ee;
+  cursor: pointer;
 }
 
-/* ROW */
+/* =========================
+ROW
+========================= */
 .row {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* VLAN */
+/* =========================
+VLAN (style premium)
+========================= */
 .vlan {
-    background: white;
-    border: 2px solid #1e3c72;
-    color: #1e3c72;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
 
-    transition: all 0.25s ease;
+  border: 1px solid rgba(124,58,237,0.4);
+  color: white;
+
+  transition: 0.3s;
 }
 
-/* 🌟 FLOAT VLAN -3PX */
 .vlan:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 10px 20px rgba(30,60,114,0.35);
-    cursor: pointer;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(124,58,237,0.3);
+  border-color: #22d3ee;
+  cursor: pointer;
 }
 
-/* PROJECT INFO */
+/* =========================
+PROJECT INFO
+========================= */
 .project-info {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #1e3c72;
-    font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  font-weight: bold;
 }
 
-/* FOOTER */
+/* =========================
+FOOTER
+========================= */
 footer {
-    text-align: center;
-    padding: 15px;
-    font-size: 12px;
-    color: #777;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
 }
 </style>
 
