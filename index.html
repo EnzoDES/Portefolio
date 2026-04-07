@@ -148,6 +148,17 @@ background:#f4f4f4;
     object-fit: cover;
 	}
 }
+
+	.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
 
 </head>
@@ -186,7 +197,7 @@ background:#f4f4f4;
 
 </nav>
 
-<div class="hero" id="acceuil">
+<div class="hero reveal" id="acceuil">
 	  <img 
     src="" 
     style="max-width:900px; width:100%; height:auto; border-radius:10px;">
@@ -196,7 +207,7 @@ background:#f4f4f4;
 
 <section id="annee1">
 
-<div class="card">
+<div class="card reveal">
 
 <h2>Première année – BTS SIO</h2>
 
@@ -224,7 +235,7 @@ background:#f4f4f4;
 
 <section id="annee2">
 
-<div class="card">
+<div class="card reveal">
 
 <h2>Deuxième année – BTS SIO</h2>
 
@@ -265,7 +276,7 @@ background:#f4f4f4;
 
 <section id="stages"> 
 
-<div class="card">
+<div class="card reveal">
 
     <h2 style="text-align: left; margin-bottom: 50px;">Mon Parcours Professionnel BTS SIO</h2>
 	
@@ -312,7 +323,7 @@ background:#f4f4f4;
 
 <section id="projets">
 
-<div class="card">
+<div class="card reveal">
 
 <h2>Mes Projets</h2>
 	
@@ -349,7 +360,7 @@ background:#f4f4f4;
 
 	<section id="techno">
 
-<div class="card">
+<div class="card reveal">
 
 <h2>Veille Technologique</h2>
 
@@ -386,7 +397,7 @@ background:#f4f4f4;
 
 <section id="tableau">
 	
-<div class="card">
+<div class="card reveal">
 
 <h2>Mon Tableau de synthèse</h2>
 
@@ -460,7 +471,7 @@ background:#f4f4f4;
 
 <section id="contact">
 
-<div class="card">
+<div class="card reveal">
 
   <h2>Me Contactez</h2>
 
