@@ -132,3 +132,13 @@ body > .section-title:last-of-type + *:hover {
         width: 100px;
         height: 100px;
     }
+
+    @keyframes auraPulse{
+  0%{opacity:0.4; transform:scale(1);}
+  50%{opacity:0.7; transform:scale(1.02);}
+  100%{opacity:0.4; transform:scale(1);}
+}
+
+.card:hover::before{
+  animation:auraPulse 3s infinite ease-in-out;
+}
