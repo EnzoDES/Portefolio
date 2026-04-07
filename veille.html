@@ -7,132 +7,230 @@
 <title>Veille technologique - Réalité Virtuelle</title>
 
 <style>
+/* =========================
+RESET / BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 35px;
-    color: #2b2b2b;
-
-    /* Fond plus propre (moins agressif que gradient full écran) */
-    background: #f4f7fb;
+  background: #0a0c12;
+  color: white;
+  padding: 40px;
+  overflow-x: hidden;
 }
 
-/* Bandeau haut type “présentation BTS” */
+/* =========================
+BACKGROUND PREMIUM ANIMÉ
+========================= */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(124,58,237,0.25), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(34,211,238,0.18), transparent 40%);
+  animation: bgMove 12s infinite alternate ease-in-out;
+  z-index: -2;
+}
+
+@keyframes bgMove {
+  0% { transform: scale(1) translate(0,0); }
+  100% { transform: scale(1.15) translate(30px,-20px); }
+}
+
+/* =========================
+TITRE PRINCIPAL (H1)
+========================= */
 h1 {
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    margin: 0 0 25px 0;
-    padding: 25px;
+  text-align: center;
+  font-size: 32px;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 15px;
 
-    /* même code couleur que ton thème */
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
 
-    border-radius: 12px;
-    letter-spacing: 1px;
+  color: white;
+  letter-spacing: 1px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+  background: linear-gradient(90deg,#7c3aed,#22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Conteneur */
+/* =========================
+CONTAINER
+========================= */
 .container {
-    max-width: 950px;
-    margin: auto;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* Sections type “cartes CV” */
+/* =========================
+SECTIONS / CARDS PREMIUM
+========================= */
 section {
-    background: white;
-    padding: 22px;
-    margin-bottom: 18px;
-    border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 15px;
 
-    box-shadow: 0 4px 14px rgba(30, 60, 114, 0.12);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 
-    border-left: 5px solid #2a5298;
-    transition: 0.25s ease;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Hover discret pro */
+/* hover premium */
 section:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(30, 60, 114, 0.18);
+  transform: translateY(-10px) scale(1.01);
+  background: rgba(124,58,237,0.12);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
 }
 
-/* Titres harmonisés avec le fond */
+/* glow subtil sur card */
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(124,58,237,0.15), transparent 60%);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+section:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+TITRES SECTIONS (H2)
+========================= */
 h2 {
-    color: #1e3c72;
-    font-size: 20px;
-    margin-top: 0;
-
-    position: relative;
-    padding-bottom: 6px;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 8px;
 }
 
-/* petite barre moderne sous titre */
+/* underline premium */
 h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #2a5298;
-    margin-top: 6px;
-    border-radius: 3px;
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 5px;
+
+  background: linear-gradient(90deg,#7c3aed,#22d3ee);
 }
 
-/* Problématique */
+/* =========================
+PROBLEMATIQUE (STYLE CARD)
+========================= */
 .problematique {
-    font-weight: 500;
-    color: #1e3c72;
-    background: #eef4ff;
-    padding: 12px;
-    border-radius: 8px;
-    border-left: 4px solid #2a5298;
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+
+  border-left: 4px solid #7c3aed;
+  color: white;
+
+  margin-top: 10px;
 }
 
-/* Images placeholder */
+/* =========================
+IMAGE BOX PREMIUM
+========================= */
 .image-box {
-    width: 100%;
-    height: 210px;
-    margin-top: 12px;
+  width: 100%;
+  height: 220px;
+  margin-top: 15px;
 
-    border-radius: 10px;
-    border: 2px dashed #2a5298;
+  border-radius: 12px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: rgba(255,255,255,0.03);
+  border: 2px dashed rgba(124,58,237,0.5);
 
-    color: #2a5298;
-    background: #f7f9fc;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+
+  transition: 0.3s;
 }
 
-/* Listes */
+.image-box:hover {
+  border-color: #22d3ee;
+  color: white;
+}
+
+/* =========================
+LISTES
+========================= */
 ul {
-    margin-left: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 li {
-    margin-bottom: 6px;
+  margin-bottom: 6px;
+  opacity: 0.9;
 }
 
-/* Responsive */
+/* =========================
+REVEAL ANIMATION (compatible CV)
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
 @media (max-width: 700px) {
-    body {
-        padding: 15px;
-    }
+  body {
+    padding: 15px;
+  }
 
-    h1 {
-        font-size: 22px;
-        padding: 18px;
-    }
+  h1 {
+    font-size: 24px;
+    padding: 18px;
+  }
 
-    section {
-        padding: 18px;
-    }
+  section {
+    padding: 18px;
+  }
 
-    .image-box {
-        height: 160px;
-    }
+  .image-box {
+    height: 160px;
+  }
 }
 </style>
 
