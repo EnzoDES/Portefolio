@@ -6,7 +6,152 @@
 			<link rel="stylesheet" type="text/css" media="screen" href="CV.css">
 
 		<title>CV - Enzo DESMARETS</title>	
-		<style>      
+		<style>  
+
+			/* ===== Body & Général ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #333;
+}
+
+/* Conteneur général */
+body > * {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ===== Image profil ===== */
+img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ===== Header ===== */
+header {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: #1e3c72;
+}
+
+header p {
+    margin: 4px 0;
+    color: #555;
+    font-size: 15px;
+}
+
+/* ===== Sections ===== */
+section {
+    background: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    line-height: 1.6;
+}
+
+/* Titres sections */
+.section-title {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.section-title h3 {
+    margin: 0;
+}
+
+/* Dates */
+.date {
+    font-weight: bold;
+    color: #2a5298;
+    font-size: 16px;
+}
+
+/* Hover moderne sur sections */
+section:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ===== Centre d'intérêt ===== */
+/* Titre */
+body > .section-title:last-of-type {
+    max-width: 900px;
+    margin: 20px auto 0 auto;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px 8px 0 0;
+    font-size: 18px;
+}
+
+/* Texte sous le titre */
+body > .section-title:last-of-type + * {
+    display: block;
+    background: white;
+    padding: 25px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* Hover identique aux autres sections */
+body > .section-title:last-of-type + *:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 24px;
+    }
+    
+    section, body > .section-title:last-of-type + * {
+        padding: 20px;
+    }
+    
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    @keyframes auraPulse{
+  0%{opacity:0.4; transform:scale(1);}
+  50%{opacity:0.7; transform:scale(1.02);}
+  100%{opacity:0.4; transform:scale(1);}
+}
+
+.card:hover::before{
+  animation:auraPulse 3s infinite ease-in-out;
+}
 </style>
 
 </head>
