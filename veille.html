@@ -93,11 +93,19 @@ h2::after {
   background: rgba(255,255,255,0.05);
 }
 
-/* IMAGE */
+/* IMAGE BOX */
 .image-box {
-  max-width:900px;
-  width:100%;
-  border-radius: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box img {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 /* BUTTON */
@@ -107,6 +115,7 @@ button {
   background: #7c3aed;
   color: white;
   border: none;
+  cursor: pointer;
 }
 </style>
 
@@ -118,112 +127,135 @@ button {
 
 <h1>Veille technologique : Réalité Virtuelle</h1>
 
+<!-- PROBLEMATIQUE -->
 <section>
 <h2>Problématique</h2>
 <p class="problematique">
-Comment la réalité virtuelle transforme-t-elle les usages dans différents domaines ?
+Comment la réalité virtuelle transforme-t-elle les usages dans différents domaines et quels sont ses enjeux, ses limites et son impact ?
 </p>
 </section>
 
 <!-- INTRO -->
 <section>
 <h2>Introduction</h2>
-<p>La réalité virtuelle est une technologie immersive permettant de simuler un environnement 3D interactif.</p>
+<p>
+La réalité virtuelle est une technologie immersive permettant de plonger un utilisateur dans un environnement numérique interactif.
+Elle est utilisée dans le jeu vidéo, la médecine, l’éducation et l’industrie.
+</p>
+
+<div class="image-box">
+  <img src="image.jpg" alt="Réalité virtuelle">
+</div>
+</section>
+
+<!-- DEFINITION -->
+<section>
+<h2>Définition</h2>
+<p>
+La réalité virtuelle consiste à simuler un environnement en 3D grâce à un casque VR et des capteurs de mouvement.
+</p>
+
+<div class="image-box">
+  <img src="fonctionnement.jpg" alt="Fonctionnement VR">
+</div>
 </section>
 
 <!-- OUTILS VEILLE (AJOUT BTS IMPORTANT) -->
 <section>
 <h2>Outils de veille utilisés</h2>
 <ul>
-<li>Google Alerts (mots-clés : réalité virtuelle, VR, Meta Quest)</li>
-<li>Feedly (flux d’actualités tech)</li>
-<li>YouTube Tech / conférences</li>
-<li>Sites spécialisés : The Verge, ZDNet, TechCrunch</li>
+<li>Google Alerts (VR, réalité virtuelle, Meta Quest)</li>
+<li>Feedly (flux technologiques)</li>
+<li>YouTube (tests et innovations VR)</li>
+<li>Sites spécialisés (The Verge, ZDNet, TechCrunch)</li>
 </ul>
 </section>
 
-<!-- SOURCES -->
-<section>
-<h2>Sources de la veille</h2>
-<ul>
-<li>Articles spécialisés en technologies immersives</li>
-<li>Blogs VR et gaming</li>
-<li>Actualités entreprises (Meta, Sony, Apple Vision Pro)</li>
-</ul>
-</section>
-
-<!-- TON CONTENU EXISTANT -->
-<section>
-<h2>Définition</h2>
-<p>La VR simule un environnement en 3D via un casque immersif.</p>
-</section>
-
+<!-- FONCTIONNEMENT -->
 <section>
 <h2>Fonctionnement</h2>
 <ul>
 <li>Casque VR</li>
-<li>Capteurs</li>
-<li>Manettes</li>
-<li>PC / console</li>
+<li>Capteurs de mouvement</li>
+<li>Manettes interactives</li>
+<li>Ordinateur ou console</li>
 </ul>
+
+<div class="image-box">
+  <img src="schema.png" alt="Schéma VR">
+</div>
 </section>
 
+<!-- APPLICATIONS -->
 <section>
 <h2>Applications</h2>
 <ul>
 <li>Jeux vidéo</li>
-<li>Médecine</li>
-<li>Industrie</li>
-<li>Éducation</li>
+<li>Médecine (simulation chirurgicale)</li>
+<li>Industrie (prototypage 3D)</li>
+<li>Éducation interactive</li>
 </ul>
+
+<div class="image-box">
+  <img src="utilisation.png" alt="Utilisation VR">
+</div>
 </section>
 
+<!-- AVANTAGES -->
 <section>
 <h2>Avantages</h2>
 <ul>
-<li>Immersion</li>
-<li>Apprentissage</li>
-<li>Simulation</li>
+<li>Immersion totale</li>
+<li>Apprentissage efficace</li>
+<li>Simulation sans risque</li>
 </ul>
 </section>
 
+<!-- LIMITES -->
 <section>
-<h2>Limites</h2>
+<h2>Limites et risques</h2>
 <ul>
-<li>Coût</li>
-<li>Nausées</li>
+<li>Coût élevé</li>
 <li>Fatigue visuelle</li>
+<li>Nausées</li>
+<li>Isolement</li>
 </ul>
 </section>
 
+<!-- EVOLUTION -->
 <section>
-<h2>Évolution</h2>
-<p>La VR devient une technologie majeure avec des usages professionnels et grand public.</p>
+<h2>Évolution et avenir</h2>
+<p>
+La réalité virtuelle évolue rapidement avec des casques plus accessibles et puissants.
+</p>
+
+<div class="image-box">
+  <img src="futur.png" alt="Futur VR">
+</div>
 </section>
 
-<!-- AJOUT IMPORTANT BTS -->
+<!-- AJOUT BTS -->
 <section>
 <h2>Analyse personnelle</h2>
 <p>
-La réalité virtuelle évolue très rapidement. On observe une démocratisation avec des casques plus accessibles.
-Cependant, les limites techniques et médicales freinent encore son adoption massive.
+La VR évolue très vite mais reste limitée par le coût et les contraintes physiques.
+Elle va devenir un outil important dans le travail et le divertissement.
 </p>
 </section>
 
 <section>
 <h2>Impact sur le BTS SIO</h2>
 <ul>
-<li>SISR : infrastructures réseau pour VR (latence, cloud, streaming)</li>
-<li>SLAM : développement d’applications immersives</li>
-<li>Sécurité : gestion des données utilisateurs VR</li>
+<li>SISR : réseaux et latence pour VR</li>
+<li>SLAM : développement d’applications VR</li>
+<li>Sécurité : protection des données utilisateurs</li>
 </ul>
 </section>
 
 <section>
 <h2>Synthèse de veille</h2>
 <p>
-La VR est une technologie en forte croissance qui impacte de nombreux secteurs.
-Elle reste encore coûteuse mais tend à se démocratiser dans les prochaines années.
+La réalité virtuelle est une technologie en forte croissance qui transforme plusieurs secteurs.
 </p>
 </section>
 
@@ -231,7 +263,7 @@ Elle reste encore coûteuse mais tend à se démocratiser dans les prochaines an
 <section>
 <h2>Conclusion</h2>
 <p>
-La réalité virtuelle est une technologie innovante mais encore en évolution.
+La réalité virtuelle est une technologie innovante mais encore en développement.
 </p>
 </section>
 
