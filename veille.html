@@ -17,9 +17,7 @@ RESET / BASE
   font-family: system-ui, Arial, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   background: #0a0c12;
@@ -28,9 +26,7 @@ body {
   overflow-x: hidden;
 }
 
-/* =========================
-BACKGROUND PREMIUM ANIMÉ
-========================= */
+/* BACKGROUND */
 body::before {
   content: "";
   position: fixed;
@@ -47,385 +43,207 @@ body::before {
   100% { transform: scale(1.15) translate(30px,-20px); }
 }
 
-/* =========================
-TITRE PRINCIPAL (H1)
-========================= */
+/* TITRE */
 h1 {
   text-align: center;
   font-size: 32px;
   padding: 25px;
   margin-bottom: 30px;
   border-radius: 15px;
-
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-
-  color: white;
-  letter-spacing: 1px;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-
   background: linear-gradient(90deg,#7c3aed,#22d3ee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* =========================
-CONTAINER
-========================= */
+/* CONTAINER */
 .container {
   max-width: 1000px;
   margin: auto;
 }
 
-/* =========================
-SECTIONS / CARDS PREMIUM
-========================= */
+/* CARDS */
 section {
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(20px);
   padding: 25px;
   margin-bottom: 20px;
   border-radius: 15px;
-
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-
   transition: 0.5s;
-  position: relative;
-  overflow: hidden;
 }
 
-/* hover premium */
 section:hover {
-  transform: translateY(-10px) scale(1.01);
+  transform: translateY(-10px);
   background: rgba(124,58,237,0.12);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
 }
 
-/* glow subtil sur card */
-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, rgba(124,58,237,0.15), transparent 60%);
-  opacity: 0;
-  transition: 0.4s;
-}
-
-section:hover::before {
-  opacity: 1;
-}
-
-/* =========================
-TITRES SECTIONS (H2)
-========================= */
-h2 {
-  font-size: 20px;
-  color: white;
-  margin-bottom: 10px;
-  position: relative;
-  padding-bottom: 8px;
-}
-
-/* underline premium */
+/* TITRES */
 h2::after {
   content: "";
   display: block;
   width: 70px;
   height: 3px;
-  margin-top: 8px;
-  border-radius: 5px;
-
   background: linear-gradient(90deg,#7c3aed,#22d3ee);
+  margin-top: 8px;
 }
 
-/* =========================
-PROBLEMATIQUE (STYLE CARD)
-========================= */
+/* PROBLEMATIQUE */
 .problematique {
-  font-weight: 500;
   padding: 15px;
-  border-radius: 10px;
-
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
-
   border-left: 4px solid #7c3aed;
-  color: white;
-
-  margin-top: 10px;
+  background: rgba(255,255,255,0.05);
 }
 
-/* =========================
-IMAGE BOX PREMIUM
-========================= */
+/* IMAGE */
 .image-box {
-max-width:900px;
-width:100%; 
-height:auto;
-content: center;
-
+  max-width:900px;
+  width:100%;
   border-radius: 12px;
-
-  background: rgba(255,255,255,0.03);
-  border: 2px dashed rgba(124,58,237,0.5);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: rgba(255,255,255,0.6);
-  font-size: 14px;
-
-  transition: 0.3s;
 }
 
-.image-box:hover {
-  border-color: #22d3ee;
-  color: white;
-}
-
-	/* =========================
-BOUTON UNIQUE
-========================= */
+/* BUTTON */
 button {
   padding: 12px 20px;
-  border: none;
   border-radius: 10px;
   background: #7c3aed;
   color: white;
-  cursor: pointer;
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-
-button:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(124,58,237,0.3);
-}
-
-/* glow bouton */
-button::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(90deg,#7c3aed,#22d3ee,#7c3aed);
-  opacity: 0;
-  filter: blur(12px);
-  transition: 0.3s;
-  z-index: -1;
-}
-
-button:hover::before {
-  opacity: 1;
-}
-
-button:active {
-  transform: scale(0.97);
-}
-
-/* =========================
-LISTES
-========================= */
-ul {
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-li {
-  margin-bottom: 6px;
-  opacity: 0.9;
-}
-
-/* =========================
-REVEAL ANIMATION (compatible CV)
-========================= */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-@media (max-width: 700px) {
-  body {
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 24px;
-    padding: 18px;
-  }
-
-  section {
-    padding: 18px;
-  }
-
-  .image-box {
-    height: 160px;
-  }
+  border: none;
 }
 </style>
 
 </head>
 
 <body>
-<section>
+
 <div class="container">
 
 <h1>Veille technologique : Réalité Virtuelle</h1>
-</section>
-<!-- PROBLEMATIQUE -->
+
 <section>
 <h2>Problématique</h2>
 <p class="problematique">
-Comment la réalité virtuelle transforme-t-elle les usages dans différents domaines et quels sont ses enjeux, ses limites et son impact ?
+Comment la réalité virtuelle transforme-t-elle les usages dans différents domaines ?
 </p>
 </section>
 
 <!-- INTRO -->
 <section>
 <h2>Introduction</h2>
-<p>
-La réalité virtuelle est une technologie immersive permettant de plonger un utilisateur dans un environnement numérique interactif.
-Elle est aujourd’hui utilisée dans de nombreux secteurs comme le jeu vidéo, la médecine, l’éducation ou encore l’industrie.
-</p>
-
-<div class="image-box">
-  <img 
-    src="image.jpg" 
-    style=" max-width:900px; width:100%; height:auto; border-radius:10px;">
-</div>
-</div>
+<p>La réalité virtuelle est une technologie immersive permettant de simuler un environnement 3D interactif.</p>
 </section>
 
-<!-- DEFINITION -->
+<!-- OUTILS VEILLE (AJOUT BTS IMPORTANT) -->
+<section>
+<h2>Outils de veille utilisés</h2>
+<ul>
+<li>Google Alerts (mots-clés : réalité virtuelle, VR, Meta Quest)</li>
+<li>Feedly (flux d’actualités tech)</li>
+<li>YouTube Tech / conférences</li>
+<li>Sites spécialisés : The Verge, ZDNet, TechCrunch</li>
+</ul>
+</section>
+
+<!-- SOURCES -->
+<section>
+<h2>Sources de la veille</h2>
+<ul>
+<li>Articles spécialisés en technologies immersives</li>
+<li>Blogs VR et gaming</li>
+<li>Actualités entreprises (Meta, Sony, Apple Vision Pro)</li>
+</ul>
+</section>
+
+<!-- TON CONTENU EXISTANT -->
 <section>
 <h2>Définition</h2>
-<p>
-La réalité virtuelle consiste à simuler un environnement en 3D grâce à des casques VR et des capteurs de mouvement.
-Elle permet une immersion visuelle et sonore complète.
-</p>
-
-<div class="image-box">
-  <img 
-    src="fonctionnement.jpg" 
-    style="max-width:900px; width:100%; height:auto;border-radius:10px;">
-
-</div>
-</div>
+<p>La VR simule un environnement en 3D via un casque immersif.</p>
 </section>
 
-<!-- FONCTIONNEMENT -->
 <section>
 <h2>Fonctionnement</h2>
 <ul>
-<li>Casque de réalité virtuelle</li>
-<li>Capteurs de mouvement</li>
-<li>Manettes interactives</li>
-<li>Ordinateur ou console puissante</li>
+<li>Casque VR</li>
+<li>Capteurs</li>
+<li>Manettes</li>
+<li>PC / console</li>
 </ul>
-
-<div class="image-box">
-  <img 
-    src="schema.png" 
-    style=" max-width:900px; width:100%; height:auto; border-radius:10px;">
-</div>
-</div>
 </section>
 
-<!-- APPLICATIONS -->
 <section>
 <h2>Applications</h2>
 <ul>
-<li>Jeux vidéo (immersion totale)</li>
-<li>Médecine (simulation d’opérations)</li>
-<li>Industrie (conception 3D)</li>
-<li>Éducation (apprentissage interactif)</li>
-<li>Sécurité (entraînement réaliste)</li>
+<li>Jeux vidéo</li>
+<li>Médecine</li>
+<li>Industrie</li>
+<li>Éducation</li>
 </ul>
-
-<div class="image-box">
-  <img 
-    src="utilisation.png" 
-    style=" max-width:900px; width:100%; height:auto; border-radius:10px;">
-</div>
-</div>
 </section>
 
-<!-- AVANTAGES -->
 <section>
 <h2>Avantages</h2>
 <ul>
-<li>Immersion totale</li>
-<li>Apprentissage efficace</li>
-<li>Simulation sans danger</li>
-<li>Innovation technologique</li>
+<li>Immersion</li>
+<li>Apprentissage</li>
+<li>Simulation</li>
 </ul>
 </section>
 
-<!-- LIMITES -->
 <section>
-<h2>Limites et risques</h2>
+<h2>Limites</h2>
 <ul>
-<li>Coût élevé</li>
+<li>Coût</li>
+<li>Nausées</li>
 <li>Fatigue visuelle</li>
-<li>Nausées possibles</li>
-<li>Risque d’isolement</li>
-<li>Collecte de données personnelles</li>
 </ul>
 </section>
 
-<!-- EVOLUTION -->
 <section>
-<h2>Évolution et avenir</h2>
-<p>
-La réalité virtuelle est en forte croissance grâce aux investissements des grandes entreprises.
-Elle pourrait devenir une technologie essentielle dans le travail, les loisirs et la communication.
-</p>
+<h2>Évolution</h2>
+<p>La VR devient une technologie majeure avec des usages professionnels et grand public.</p>
+</section>
 
-<div class="image-box">
-  <img 
-    src="futur.png" 
-    style=" max-width:900px; width:100%; height:auto; border-radius:10px;">
-</div>
-</div>
+<!-- AJOUT IMPORTANT BTS -->
+<section>
+<h2>Analyse personnelle</h2>
+<p>
+La réalité virtuelle évolue très rapidement. On observe une démocratisation avec des casques plus accessibles.
+Cependant, les limites techniques et médicales freinent encore son adoption massive.
+</p>
+</section>
+
+<section>
+<h2>Impact sur le BTS SIO</h2>
+<ul>
+<li>SISR : infrastructures réseau pour VR (latence, cloud, streaming)</li>
+<li>SLAM : développement d’applications immersives</li>
+<li>Sécurité : gestion des données utilisateurs VR</li>
+</ul>
+</section>
+
+<section>
+<h2>Synthèse de veille</h2>
+<p>
+La VR est une technologie en forte croissance qui impacte de nombreux secteurs.
+Elle reste encore coûteuse mais tend à se démocratiser dans les prochaines années.
+</p>
 </section>
 
 <!-- CONCLUSION -->
 <section>
 <h2>Conclusion</h2>
 <p>
-La réalité virtuelle est une technologie innovante qui transforme de nombreux domaines.
-Cependant, elle doit encore évoluer pour devenir plus accessible et limiter ses contraintes techniques et sociales.
+La réalité virtuelle est une technologie innovante mais encore en évolution.
 </p>
 </section>
-	 <section>
-	 
- <a href="https://enzodes.github.io/Portefolio/">
- <button style="
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-     background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-	  margin-top:10px
-    ">
-   Retour au portfolio
-    </button>
-		 </a>
+
+<!-- RETOUR -->
+<section>
+<a href="https://enzodes.github.io/Portefolio/">
+<button style="width:100%;">
+Retour au portfolio
+</button>
+</a>
 </section>
+
 </div>
 
 </body>
